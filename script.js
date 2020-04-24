@@ -17,37 +17,38 @@ else
 const box = document.querySelectorAll(".box");
 const spanValid = document.querySelectorAll(".valid");
 const spanPoids = document.querySelectorAll(".kgs");
-let countOK = 0;
-let countNOK = 0;
-let countKgs = 0;
-
 
 
 /************Mise à jour des données *********************/
-for (let i=0;i<31;i++)
+function update()
 {
-    spanPoids[i].textContent = tab_Storage[i].poids;
-    spanValid[i].textContent = tab_Storage[i].valid;
-    box[i].style.backgroundColor = tab_Storage[i].color;
-    if(spanValid[i].textContent == "✔️") countOK++;
-    else if ((spanValid[i].textContent == "❌")) countNOK++;
-}
+    let countOK  = 0;
+    let countNOK = 0;
+    let countKgs = 0;
 
-nbOK.textContent = countOK;
-nbNOK.textContent = countNOK;
-poidsUpdate();
+    for (let i=0;i<31;i++)
+    {
+        spanPoids[i].textContent = tab_Storage[i].poids;
+        spanValid[i].textContent = tab_Storage[i].valid;
+        box[i].style.backgroundColor = tab_Storage[i].color;
+        if(spanValid[i].textContent == "✔️") countOK++;
+        else if ((spanValid[i].textContent == "❌")) countNOK++;
+    }
 
-function poidsUpdate()
-{
+    nbOK.textContent = countOK;
+    nbNOK.textContent = countNOK;
+
     let tabKgs = tab_Storage.filter(el => el.poids != null);
-    
-    if(tabKgs.length < 1) nbKgs.textContent = "0";
+
+    if(tabKgs.length < 1) nbKgs.textContent = 0;
     else
     {
         countKgs = tabKgs[0].poids - tabKgs[tabKgs.length-1].poids;
         nbKgs.textContent = countKgs.toFixed(1);
     }
 }
+
+update();
 
 /***********Box 0****************************************/
 box[0].onclick = () =>{
@@ -98,7 +99,7 @@ for(let i=1;i<31;i++)
                 tab_Storage[i].poids = null;
                 tab_Storage[i].color = box[i].style.backgroundColor;
                 localStorage.setItem("tab_Storage", JSON.stringify(tab_Storage));
-
+                update();
                 popUp.style.display = "none";
                 content.style.pointerEvents = "auto";
             };
@@ -111,6 +112,7 @@ for(let i=1;i<31;i++)
                 divJeune.style.display = "none";
                 divPoids.style.display = "block";
                 inputPoids.focus();
+
             };
 
 
@@ -118,8 +120,6 @@ for(let i=1;i<31;i++)
                 spanPoids[i].textContent = inputPoids.value;
                 tab_Storage[i].poids = spanPoids[i].textContent;
                 tab_Storage[i].color = box[i].style.backgroundColor;
-                poidsUpdate();
-
 
                 popUp.style.display = "none";
                 divJeune.style.display = "block";
@@ -127,7 +127,7 @@ for(let i=1;i<31;i++)
                 content.style.pointerEvents = "auto"; 
 
                 localStorage.setItem("tab_Storage", JSON.stringify(tab_Storage));
-
+                update();
                 return false;
             };
     };
