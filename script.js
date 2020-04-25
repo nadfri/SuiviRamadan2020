@@ -10,6 +10,7 @@ else
     tab_Storage = [];
     for(let i=0;i<31;i++) tab_Storage[i] = {poids: null, valid: "✔", color:null};
     popUp0.style.display = "block";
+    content.style.pointerEvents = "none"; //desactive le clic en dehors de la bulle
     inputPoids0.focus();
 
 }
@@ -133,14 +134,6 @@ for(let i=1;i<31;i++)
     };
 
 }
-
-/***************Comptage des jours et kilos */
-
-
-
-
-
-
 
 
 
