@@ -1,5 +1,6 @@
 window.onload = () =>{
     "use strict";
+
 /*********************************** */
 let tab_Storage;
 
