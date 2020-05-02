@@ -40,7 +40,8 @@ function update()
     nbOK.textContent = countOK;
     nbNOK.textContent = countNOK;
 
-    let tabKgs = tab_Storage.filter(el => el.poids != null);
+    let tabKgs = tab_Storage.filter(el => el.poids > 0);
+    console.log(tabKgs);
 
     if(tabKgs.length < 1) nbKgs.textContent = 0;
     else
