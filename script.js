@@ -11,7 +11,7 @@ else
     tab_Storage = [];
     for(let i=0;i<31;i++) tab_Storage[i] = {poids: null, valid: "✔", color:null};
     popUp0.style.display = "block";
-    content.style.pointerEvents = "none"; //desactive le clic en dehors de la bulle
+    container.style.pointerEvents = "none"; //desactive le clic en dehors de la bulle
     inputPoids0.focus();
 
 }
@@ -55,7 +55,7 @@ update();
 
 /***********Box 0****************************************/
 box[0].onclick = () =>{
-    content.style.pointerEvents = "none"; //desactive le clic en dehors de la bulle
+    container.style.pointerEvents = "none"; //desactive le clic en dehors de la bulle
     popUp0.style.display = "block";
     inputPoids0.focus();
 };
@@ -66,7 +66,7 @@ form0.onsubmit = () =>{
     tab_Storage[0].poids = spanPoids[0].textContent;
     localStorage.setItem("tab_Storage", JSON.stringify(tab_Storage));
 
-    content.style.pointerEvents = "auto"; //réactive le click sur la page
+    container.style.pointerEvents = "auto"; //réactive le click sur la page
 
     return false;
 };
@@ -76,7 +76,7 @@ for(let i=1;i<31;i++)
 {
     box[i].onclick = () =>
     { 
-            content.style.pointerEvents = "none";
+            container.style.pointerEvents = "none";
             inputPoids.value = "";
 
             popUp.style.display = "block";
@@ -91,7 +91,7 @@ for(let i=1;i<31;i++)
 
             closePop.onclick = () =>{
                 popUp.style.display = "none";
-                content.style.pointerEvents = "auto";
+                container.style.pointerEvents = "auto";
             };
 
             effacer.onclick = () => {
@@ -104,7 +104,7 @@ for(let i=1;i<31;i++)
                 localStorage.setItem("tab_Storage", JSON.stringify(tab_Storage));
                 update();
                 popUp.style.display = "none";
-                content.style.pointerEvents = "auto";
+                container.style.pointerEvents = "auto";
             };
         
 
@@ -127,7 +127,7 @@ for(let i=1;i<31;i++)
                 popUp.style.display = "none";
                 divJeune.style.display = "block";
                 divPoids.style.display = "none";
-                content.style.pointerEvents = "auto"; 
+                container.style.pointerEvents = "auto"; 
 
                 localStorage.setItem("tab_Storage", JSON.stringify(tab_Storage));
                 update();

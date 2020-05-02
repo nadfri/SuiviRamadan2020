@@ -9,7 +9,7 @@ body{
     background-size: cover;
 }
 
-#content{
+#container{
     border: ridge 4px;
     border-radius: 5px;
     border-color: indianred;
