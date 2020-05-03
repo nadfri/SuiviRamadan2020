@@ -19,6 +19,7 @@ body{
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
+    min-height: 90vh;
 }
 
 .box{
@@ -43,6 +44,7 @@ body{
 
 
 .date{
+    padding-left: 2px;
     font-size: 0.7rem;
     font-style: oblique;
     color : AntiqueWhite ;
@@ -51,7 +53,7 @@ body{
 
 .jour{
     font-size: 1.2rem;
-    color: white;
+    color: #DCE7DC;
     align-self: center;
 }
 
@@ -77,7 +79,7 @@ body{
 
 .pop{
     position: absolute;
-    top: 20%;
+    top: 20vh;
     left: 10%;
     width: 80%;
     padding-bottom: 5vh;
@@ -89,6 +91,8 @@ body{
     background-color: white;
     text-align: center;
 }
+
+.pop h3{padding: 2vh 0;}
 
 #closePop{
     position: relative;
@@ -109,20 +113,20 @@ body{
 
 button, input[type=submit]{
     border: none;
-    height: 5vh;
     border-radius: 5px;
-    width: 16vw;
+    width: 3.5rem;
+    height: 1.5rem;
     cursor: pointer;
 }
 
 input{
-    width: 16vw;
-    height: 4vh;
+    width: 5rem;
+    height: 1.5rem;
     border-radius: 5px;
 }
 
 #output{
-    background: rgba(91,137,211,0.5);
+    background: rgba(180, 241, 223, 0.2);
     font-size: 0.7rem;
     display: flex;
     flex-direction: column;
@@ -145,7 +149,7 @@ input{
 }
 
 #nbKgs{
-  color: blue;
+  color: rgb(24, 142, 238);
   font-weight: bold;
 }
 
