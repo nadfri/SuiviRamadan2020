@@ -1,0 +1,21 @@
+{
+	"dir" : "ltr",
+	"lang" : "French",
+	"name" : "Suivi du Jeûne du Ramadan 2020",
+	"scope" : "/SuiviRamadan2020/",
+	"display" : "fullscreen",
+	"start_url" : "/index.html",
+	"short_name" : "Ramadan2020",
+	"theme_color" : "transparent",
+	"description" : "Suivi des jours jeûnés et du poids pendant le Ramadan 2020",
+	"orientation" : "portrait",
+	"background_color" : "transparent",
+	"related_applications" : [],
+	"prefer_related_applications" : false,
+	"icons" : [
+		{
+			"src": "https://nadfri.github.io/SuiviRamadan2020/favicon.png",
+			"sizes": "128x128"
+		}],
+	"url" : "https://nadfri.github.io/SuiviRamadan2020/"
+}
