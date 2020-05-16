@@ -4,7 +4,7 @@
   "short_name": "Ramadan2020",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
-  "display": "fullscreen",
+  "display": "standalone",
   "orientation": "portrait",
   "Scope": "https://nadfri.github.io/SuiviRamadan2020/",
   "start_url": "https://nadfri.github.io/SuiviRamadan2020/index.html",
