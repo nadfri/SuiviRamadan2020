@@ -10,6 +10,7 @@ body{
 }
 
 #container{
+    margin-top:2vh;
     border: ridge 4px;
     border-radius: 5px;
     border-color: indianred;
@@ -19,7 +20,7 @@ body{
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
-
+    height: 97vh;
 }
 
 .box{
