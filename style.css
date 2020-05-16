@@ -10,7 +10,6 @@ body{
 }
 
 #container{
-    margin-top:2vh;
     border: ridge 4px;
     border-radius: 5px;
     border-color: indianred;
