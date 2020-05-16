@@ -19,7 +19,7 @@ body{
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
-    min-height: 90vh;
+
 }
 
 .box{
