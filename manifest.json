@@ -6,7 +6,7 @@
   "background_color": "#2196f3",
   "display": "fullscreen",
   "orientation": "portrait",
-  "Scope": "/",
+  "Scope": "https://nadfri.github.io/SuiviRamadan2020/",
   "start_url": "/index.html",
   "icons": [
     {
