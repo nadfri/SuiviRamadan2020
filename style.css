@@ -7,7 +7,7 @@
 body{
     background: url(wallpaper.jpg);
     background-size: cover;
-    height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
 }
 
 #container{
@@ -20,7 +20,9 @@ body{
     grid-template-rows: repeat(8, 1fr);
     grid-column-gap: 1px;
     grid-row-gap: 1px;
-    min-height: 90vh;
+    height: 100%;
+    /**Permet l'afficahge à 100% sur mobile**/
+    
 }
 
 .box{
@@ -153,12 +155,3 @@ input{
   color: rgb(24, 142, 238);
   font-weight: bold;
 }
-
-
-@media all and (display-mode: standalone) {
-
-    #container{
-        min-height: 100vh;
-    }
-
-  }
