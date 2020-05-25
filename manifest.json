@@ -2,12 +2,12 @@
   "lang" : "fr",
   "name": "Suivi du Jeûne du Ramadan 2020",
   "short_name": "Ramadan2020",
+  "description": "Suivi des jours jeûnés et du poids pour le ramadan 2020",
   "theme_color": "#2196f3",
   "background_color": "#2196f3",
   "display": "standalone",
   "orientation": "portrait",
-  "Scope": "https://nadfri.github.io/SuiviRamadan2020/",
-  "start_url": "https://nadfri.github.io/SuiviRamadan2020/index.html",
+  "start_url": "/SuiviRamadan2020/index.html",
   "icons": [
     {
       "src": "images/icons/icon-72x72.png",

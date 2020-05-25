@@ -136,6 +136,14 @@ for(let i=1;i<31;i++)
 
 }
 
+//*************Service Worker ******************/
+// Register service worker to control making site work offline
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker
+             .register('/SuiviRamadan2020/sw.js')
+             .then(function() { console.log('Service Worker Registered'); });
+  }
+
 /************Permettre le 100vh sur mobile */
 let vh = window.innerHeight * 0.01;
 // Then we set the value in the --vh custom property to the root of the document
