@@ -140,7 +140,7 @@ for(let i=1;i<31;i++)
 // Register service worker to control making site work offline
 if('serviceWorker' in navigator) {
     navigator.serviceWorker
-             .register('/SuiviRamadan2020/sw.js')
+             .register('/SuiviRamadan2020/sw.js',{scope: '/SuiviRamadan2020/'})
              .then(function() { console.log('Service Worker Registered'); });
   }
 
