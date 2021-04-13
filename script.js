@@ -19,6 +19,18 @@ else
 const box = document.querySelectorAll(".box");
 const spanValid = document.querySelectorAll(".valid");
 const spanPoids = document.querySelectorAll(".kgs");
+const spanDate  = document.querySelectorAll(".date"); 
+
+/************Mise à jour des Dates *********************/
+const zeroDay = new Date("2021-04-12");
+spanDate[0].textContent = new Intl.DateTimeFormat('fr-FR').format(zeroDay);
+
+for(let i=1; i<spanDate.length;i++)
+{
+    let date = new Date;
+    date.setDate(zeroDay.getDate()+i);
+    spanDate[i].textContent =  new Intl.DateTimeFormat('fr-FR').format(date);
+}
 
 
 /************Mise à jour des données *********************/
